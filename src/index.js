@@ -3,6 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 class Square extends React.Component {
+
+  //stateを覚えさせる
+  //コンストラクタを追加して状態を初期化する
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null,
+    };
+  }
+
   render() {
     return (
       <button className="square" onClick={() => {console.log('click')}}>
