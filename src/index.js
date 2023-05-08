@@ -15,7 +15,9 @@ class Square extends React.Component {
 
   render() {
     return (
-      <button className="square" onClick={() => {console.log('click')}}>
+      <button 
+      className="square" 
+      onClick={() => {this.setState({value: 'X'})}}>
         {/*受け取ったpropsを展開する */}
         {this.state.value}
       </button>
