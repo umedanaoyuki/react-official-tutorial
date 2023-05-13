@@ -26,9 +26,18 @@ class Square extends React.Component {
 }
 
 class Board extends React.Component {
+   constructor(props) {
+     super(props);
+     this.state = {
+       squares: Array(9).fill(null),
+     };
+   }
+
   renderSquare(i) {
     //データをpropsでvalueという名前で渡す
-    return <Square value={i}/>;
+    return (
+      <Square value={this.state.squares[i]}
+      onClick={() => this.handleClick(i)}/> );
   }
 
   render() {
